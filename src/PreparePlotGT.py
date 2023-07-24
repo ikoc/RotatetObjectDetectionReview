@@ -77,7 +77,7 @@ def drawPieChart(df,index,title=""):
     cx = plt.subplot(index)
     cx.pie(count, labels = name, startangle = 90)
 
-data = loadRotatedAP("test_data\gt_angle.pickle")
+data = loadRotatedAP("test_data/gt_angle_15degreeInterval.pickle")
 data["all"] = AngleGroup()
 
 clsList = data.keys()
@@ -92,7 +92,7 @@ for cls in clsList:
     for item in data["all"].angle.keys():
         data["all"].angle[item] += data[cls].angle[item] 
 
-angleList = [angle for angle in range(-90,90,10)] 
+angleList = [angle for angle in range(-90,90,15)] 
 first = angleList.pop(0)
 angleList.append(first)
 
@@ -105,13 +105,15 @@ for cls in clsList:
         
     df = pd.DataFrame(content)
     plt.figure(figsize=(10,10))
-    drawCircularBarPlot(df,221,cls.upper() +" Angle Distrubition" )
-    drawBarPlot(df,222)
+    drawCircularBarPlot(df,211,cls.upper() +" Angle Distrubition" )
+    drawBarPlot(df,212)
 
+    '''
     content = {"Name":["[-90,-45)","[-45,0)","[0,45)","[45,90)"],
                "Value":data[cls].gt}
     df = pd.DataFrame(content)
-    drawPieChart(df,223)
+    drawPieChart(df,223) ## SINAN HOCA FeedBack GEREK YOK 
     drawBarPlot(df,224,width=0.4)
+    '''
 
     plt.savefig("figures/gtDist/{}.png".format(cls))
