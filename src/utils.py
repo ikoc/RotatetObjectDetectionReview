@@ -10,7 +10,7 @@ class AngleGroup():
         self.gt = [0,0,0,0]   ## [-90,-45) [-45,0) [0,45) [45,90)
         self.tp = [0,0,0,0]   
         self.angle = {}
-        for i in range(-90,90,10):
+        for i in range(-90,90,15):
             self.angle[i] = 0
 
     def get_ap(self):
@@ -23,7 +23,7 @@ class AngleGroup():
         return np.array(self.tp)
 
     def increment(self,angle,type):
-        angle_group = round(angle/10)*10
+        angle_group = round(angle/15)*15
         if angle_group == 90:
             angle_group = -90
         self.angle[angle_group] += 1
@@ -53,7 +53,7 @@ class AngleGroup():
         self.increment(angle,"tp")
     def __repr__(self) -> str:
         return "GT:{} TP:{}".format(self.gt,self.tp)
-
+    
 def dumpRotatedAP(rotatedAP):
     with open('rotatedAP.pickle', 'wb') as handle:
         pickle.dump(rotatedAP, handle, protocol=pickle.HIGHEST_PROTOCOL)

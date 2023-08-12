@@ -1,0 +1,259 @@
+unning demo for *segm* results.
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Category name storage-tank
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.01s).
+Accumulating evaluation results...
+DONE (t=0.02s).
+----------
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   all | maxDets=200 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   all | maxDets=500 ] = 1.000
+----------
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   all | maxDets=500 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -90 | maxDets=500 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -75 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=     0 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   all | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -90 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -75 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=     0 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   all | maxDets=500 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -90 | maxDets=500 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -75 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=     0 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   all | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -90 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -75 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=     0 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    75 | maxDets=500 ] = -1.000
+----
+--------
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   all | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -90 | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -75 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=     0 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   all | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -90 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -75 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=     0 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   all | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -90 | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -75 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=     0 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   all | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -90 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -75 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=     0 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    75 | maxDets=500 ] = -1.000
+----
+--------
+Category name harbor
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.02s).
+Accumulating evaluation results...
+DONE (t=0.02s).
+----------
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   all | maxDets=100 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   all | maxDets=200 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   all | maxDets=500 ] = 0.833
+----------
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   all | maxDets=500 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -90 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -75 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=   -15 | maxDets=500 ] = 0.800
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=     0 | maxDets=500 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   all | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -90 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -75 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=   -15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=     0 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= small | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   all | maxDets=500 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -90 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -75 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=   -15 | maxDets=500 ] = 0.800
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=     0 | maxDets=500 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=medium | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   all | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -90 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -75 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=   -15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=     0 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    15 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    30 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    45 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    60 | maxDets=500 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50      | area= large | angle=    75 | maxDets=500 ] = -1.000
+----
+--------
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   all | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -90 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -75 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=   -15 | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=     0 | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   all | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -90 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -75 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=   -15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=     0 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= small | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   all | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -90 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -75 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=   -15 | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=     0 | maxDets=500 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=medium | angle=    75 | maxDets=500 ] = -1.000
+----
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   all | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -90 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -75 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=   -15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=     0 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    15 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    30 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    45 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    60 | maxDets=500 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area= large | angle=    75 | maxDets=500 ] = -1.000
+----
+--------
