@@ -31,7 +31,7 @@ def drawCircularBarPlot(df, index, title=""):
     indexes = list(range(1, len(df.index) + 1)) 
     #angles = [element * width for element in indexes]
     angles = [element * width + np.pi*3/2 - np.pi/12 for element in indexes]
-    print(angles)
+    #print(angles)
 
     maxCount = df['Value'].max()
     minCount = df['Value'].min()
@@ -40,8 +40,8 @@ def drawCircularBarPlot(df, index, title=""):
     df['ColorGroup'] = pd.cut(df['Value'], bins=GROUPS_SIZE, labels=False)
     COLORS = [f"C{i}" for i in df['ColorGroup']]
 
-    print(df)
-    print(COLORS)
+    #print(df)
+    #print(COLORS)
 
     # Draw bars
     bars = ax.bar(
@@ -95,8 +95,6 @@ def drawCircularBarPlot(df, index, title=""):
     #legend_labels = [f"{minCount + i * value_range:.1f}-{minCount + (i + 1) * value_range:.1f}" for i in range(GROUPS_SIZE)]
     #ax.legend(bars, legend_labels, title='Value Range', loc='upper left')
 
-
-
 def drawBarPlot(df, index, title="", width=2):
     name = df['Name']
     count = df['Value']
@@ -107,51 +105,58 @@ def drawBarPlot(df, index, title="", width=2):
     bx.set_xlabel("Angle")
     bx.set_ylabel("Sample Count")
 
-
 def drawPieChart(df, index, title=""):
     name = df['Name']
     count = df['Value']
     cx = plt.subplot(index)
     cx.pie(count, labels=name, startangle=90)
 
+def prepareData(data):
+    data["all"] = AngleGroup()
 
-data = loadRotatedAP("/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/DotaTrainAnalysisResult/data.pickle")
-data["all"] = AngleGroup()
+    clsList = data.keys()
 
-clsList = data.keys()
+    for cls in clsList:
+        if cls == "all":
+            continue
+        for index, value in enumerate(data[cls].gt):
+            data["all"].gt[index] += value
+        for index, value in enumerate(data[cls].tp):
+            data["all"].tp[index] += value
+        for item in data["all"].angle.keys():
+            data["all"].angle[item] += data[cls].angle[item]
+    return data
 
-for cls in clsList:
-    if cls == "all":
-        continue
-    for index, value in enumerate(data[cls].gt):
-        data["all"].gt[index] += value
-    for index, value in enumerate(data[cls].tp):
-        data["all"].tp[index] += value
-    for item in data["all"].angle.keys():
-        data["all"].angle[item] += data[cls].angle[item]
+def runPlot(data,clsList,out_path,show=False):
 
-angleList = [angle for angle in range(-90, 90, 15)]
-#first = angleList.pop(0)
-#angleList.append(first)
+    angleList = [angle for angle in range(-90, 90, 15)]
 
-for cls in clsList:
-    print(cls)
-    content = {"Name": [], "Value": []}
-    for angle in angleList:
-        content["Name"].append(angle)
-        content["Value"].append(data[cls].angle[angle])
+    for cls in clsList:
+        print(cls)
+        content = {"Name": [], "Value": []}
+        for angle in angleList:
+            content["Name"].append(angle)
+            content["Value"].append(data[cls].angle[angle])
 
-    df = pd.DataFrame(content)
-    plt.figure(figsize=(6, 6))
-    drawCircularBarPlot(df, 111, cls.upper() + " Angle Distrubition")
-    #drawBarPlot(df, 212)
+        df = pd.DataFrame(content)
+        plt.figure(figsize=(6, 6))
+        drawCircularBarPlot(df, 111, cls.upper() + " Angle Distrubition")
+        #drawBarPlot(df, 212)
 
-    '''
-    content = {"Name":["[-90,-45)","[-45,0)","[0,45)","[45,90)"],
-               "Value":data[cls].gt}
-    df = pd.DataFrame(content)
-    drawPieChart(df,223) ## SINAN HOCA FeedBack GEREK YOK 
-    drawBarPlot(df,224,width=0.4)
-    '''
+        '''
+        content = {"Name":["[-90,-45)","[-45,0)","[0,45)","[45,90)"],
+                "Value":data[cls].gt}
+        df = pd.DataFrame(content)
+        drawPieChart(df,223) ## SINAN HOCA FeedBack GEREK YOK 
+        drawBarPlot(df,224,width=0.4)
+        '''
+        if out_path != "":
+            plt.savefig("{}/dota_train_{}.png".format(out_path,cls))
+        if show:
+            plt.show()
 
-    plt.savefig("/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/figures/gtDist/dota_train_{}.png".format(cls))
+if __name__ == "__main__":
+    data = loadRotatedAP("/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/DotaTrainAnalysisResult/data.pickle")
+    out_path = "/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/figures/gtDist/"
+    data = prepareData(data)
+    runPlot(data,data.keys(),out_path)
