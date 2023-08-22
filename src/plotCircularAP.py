@@ -10,26 +10,38 @@ class ApResult():
         self.name = name
         self.ap = {"area":{},"angle":{}}
 
-    def drawAnglePlot(self):
+    def drawAnglePlot(self,key,name):
         angleList = [angle for angle in range(-90, 90, 15)]
         content = {"Name": [], "Value": []}
         for angle in angleList:
             content["Name"].append(angle)
-            content["Value"].append(self.ap["angle"][angle])
+            content["Value"].append(float(self.ap["angle"][angle][key]) * 1000)
         df = pd.DataFrame(content)
-        drawCircularBarPlot(df, 111, self.name.upper() + " Angle Distrubition")
-        plt.show()
+        drawCircularBarPlot(df, 111, self.name.upper() + " " + name)
+        #plt.show()
+        plt.savefig("C:\\Users\\ibrahim\\PycharmProjects\\RotatetObjectDetectionReview\\test_data\\"+self.name.upper() + " " + name + ".png")
+
+    def drawAreaPlot(self,key,name):
+        areaList = ["all","small","medium","large"]
+        content = {"Name": [], "Value": []}
+        for area in areaList:
+            content["Name"].append(area)
+            content["Value"].append(float(self.ap["area"][area][key]) * 1000)
+        df = pd.DataFrame(content)
+        drawCircularBarPlot(df, 111, self.name.upper() + " " + name)
+        #plt.show()
+        plt.savefig("C:\\Users\\ibrahim\\PycharmProjects\\RotatetObjectDetectionReview\\test_data\\"+self.name.upper() + " " + name + ".png")
 
 
 # Read the content from the file
-file_path = "/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/test_data/dotaValResults.txt"  # Replace with the actual file path
+file_path = "C:\\Users\\ibrahim\\PycharmProjects\\RotatetObjectDetectionReview\\test_data\dotaValResults.txt"  # Replace with the actual file path
 with open(file_path, "r") as file:
     lines = file.readlines()
 
 result_list = []
 
 # Define regular expressions to match the values
-category_pattern = re.compile(r"Category name\s+(\w+)")
+
 angle_pattern = re.compile(r"angle=\s*(-?\d+)\s*")
 area_pattern = re.compile(r"area=\s*(\w+)\s*")
 ap_pattern = re.compile(r"= (\d+\.\d+)")
@@ -38,8 +50,7 @@ ap_pattern = re.compile(r"= (\d+\.\d+)")
 for line in lines:
     line = line.strip()
     if "Category name" in line:
-        category_match = category_pattern.search(line)
-        category_name = category_match.group(1) if category_match else None
+        category_name = line.split("Category name ")[1]
         print(category_name)
         result_list.append(ApResult(category_name))
     if "Average Precision" in line and "maxDets=500" in line:
@@ -65,4 +76,5 @@ for line in lines:
         result_list[-1].ap["angle"][angle][area] = ap
 
 for r in result_list:
-    r.drawAnglePlot()
+    r.drawAnglePlot("all","mAP by Angle")
+    r.drawAreaPlot("all","mAP by Area")
