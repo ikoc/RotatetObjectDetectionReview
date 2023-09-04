@@ -29,7 +29,7 @@ annotation_folder_path = os.path.dirname(anno_path)
 file_list = os.listdir(annotation_folder_path)
 
 random.shuffle(file_list)
-file_list = file_list[0:5]
+file_list = file_list[0:1]
 print(file_list)
 
 for file_name in tqdm(file_list, desc="Processing files", unit="file"):

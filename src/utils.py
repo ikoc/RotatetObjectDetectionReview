@@ -13,7 +13,9 @@ class AngleGroup():
         self.angle = {}
         for i in range(-90,90,15):
             self.angle[i] = 0
-
+        self.area = [0,0,0]
+        self.areaRng = [[0 ** 2, 32 ** 2], [32 ** 2, 96 ** 2], [96 ** 2, 1e5 ** 2]]
+        
     def get_ap(self):
         return (self.get_tp()/self.get_gt())
 
@@ -54,6 +56,13 @@ class AngleGroup():
         self.increment(angle,"tp")
     def __repr__(self) -> str:
         return "GT:{} TP:{}".format(self.gt,self.tp)
+    
+    def increment_area(self,area):
+        for index,aRng in enumerate(self.areaRng):
+            if area > aRng[0] and area < aRng[1]:
+                self.area[index] += 1
+                break 
+
     
 def dumpRotatedAP(rotatedAP):
     with open('rotatedAP.pickle', 'wb') as handle:

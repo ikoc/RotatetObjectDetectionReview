@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.patches as mpatches
 
-def drawCircularBarPlot(df, index, title=""):
+def drawCircularBarPlot(df, index, title="",legend_title=""):
     ax = plt.subplot(index, polar=True)
     ax.set_title(title)
     plt.axis('off')
@@ -77,10 +77,15 @@ def drawCircularBarPlot(df, index, title=""):
             rotation_mode="anchor"
         )
 
+        if angle_group in ["all","large","small","medium"]:
+            t = angle_group
+        else:
+            t = "{}{}".format(angle_group,chr(176))
+            
         ax.text(
             x=angle,
             y=lowerLimit + (bar.get_height() + labelPadding),
-            s="{}{}".format(angle_group,chr(176)),
+            s=t,
             ha=alignment,
             va='center',
             rotation=rotation,
@@ -90,7 +95,7 @@ def drawCircularBarPlot(df, index, title=""):
     legend_labels = [f"{minCount + i * value_range:.1f}-{minCount + (i + 1) * value_range:.1f}" for i in range(GROUPS_SIZE)]
     legend_patches = [mpatches.Patch(color=color, label=label) for color, label in zip(COLORS_LEGEND, legend_labels)]
     #ax.legend(handles=legend_patches, title='Sample Count Intervals', loc=(-0.1,0.75))
-    ax.legend(handles=legend_patches, title='Sample Count Intervals', loc=(0,0.35))
+    ax.legend(handles=legend_patches, title=legend_title, loc=(-0.1,0.35))
 
     #legend_labels = [f"{minCount + i * value_range:.1f}-{minCount + (i + 1) * value_range:.1f}" for i in range(GROUPS_SIZE)]
     #ax.legend(bars, legend_labels, title='Value Range', loc='upper left')
@@ -125,6 +130,8 @@ def prepareData(data):
             data["all"].tp[index] += value
         for item in data["all"].angle.keys():
             data["all"].angle[item] += data[cls].angle[item]
+        for i in range(3):
+            data["all"].area[i] += data[cls].area[i]
     return data
 
 def runPlot(data,clsList,out_path,show=False):
@@ -155,8 +162,37 @@ def runPlot(data,clsList,out_path,show=False):
         if show:
             plt.show()
 
+
+def drawAreaPlot(data,clsList,out_path,show=False):
+
+    for cls in clsList:
+        print(cls)
+        areaList = ["all","small","medium","large"]
+        content = {"Name": [], "Value": []}
+
+        for area in areaList:
+            content["Name"].append(area)
+
+        content["Value"].append(sum(data[cls].area))
+        content["Value"].append(data[cls].area[0])
+        content["Value"].append(data[cls].area[1])
+        content["Value"].append(data[cls].area[2])
+
+        df = pd.DataFrame(content)
+        plt.figure()
+        drawCircularBarPlot(df, 111, cls.upper() + " Area Distrubition")
+        #drawBarPlot(df, 212)
+        if out_path != "":
+            plt.savefig("{}/dota_train_area_{}.png".format(out_path,cls))
+        if show:
+            plt.show()
+
+
+
 if __name__ == "__main__":
-    data = loadRotatedAP("/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/DotaTrainAnalysisResult/data.pickle")
+    #data = loadRotatedAP("/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/DotaTrainAnalysisResult/data.pickle")
+    data = loadRotatedAP("/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/test_data/data_area_added.pickle")
     out_path = "/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/figures/gtDist/"
     data = prepareData(data)
-    runPlot(data,data.keys(),out_path)
+    #runPlot(data,data.keys(),out_path)
+    drawAreaPlot(data,data.keys(),out_path)

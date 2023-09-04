@@ -17,9 +17,10 @@ class ApResult():
             content["Name"].append(angle)
             content["Value"].append(float(self.ap["angle"][angle][key]) * 1000)
         df = pd.DataFrame(content)
-        drawCircularBarPlot(df, 111, self.name.upper() + " " + name)
+        plt.figure()
+        drawCircularBarPlot(df, 111, self.name.upper() + " " + name,"Average Precision in 1000")
         #plt.show()
-        plt.savefig("C:\\Users\\ibrahim\\PycharmProjects\\RotatetObjectDetectionReview\\test_data\\"+self.name.upper() + " " + name + ".png")
+        plt.savefig("/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/figures/ap/"+self.name.upper() + "_" + name + ".png")
 
     def drawAreaPlot(self,key,name):
         areaList = ["all","small","medium","large"]
@@ -28,13 +29,14 @@ class ApResult():
             content["Name"].append(area)
             content["Value"].append(float(self.ap["area"][area][key]) * 1000)
         df = pd.DataFrame(content)
-        drawCircularBarPlot(df, 111, self.name.upper() + " " + name)
+        plt.figure()
+        drawCircularBarPlot(df, 111, self.name.upper() + " " + name,"Average Precision in 1000")
         #plt.show()
-        plt.savefig("C:\\Users\\ibrahim\\PycharmProjects\\RotatetObjectDetectionReview\\test_data\\"+self.name.upper() + " " + name + ".png")
+        plt.savefig("/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/figures/ap/"+self.name.upper() + "_" + name + ".png")
 
 
 # Read the content from the file
-file_path = "C:\\Users\\ibrahim\\PycharmProjects\\RotatetObjectDetectionReview\\test_data\dotaValResults.txt"  # Replace with the actual file path
+file_path = "/home/ekin/Desktop/workspace/RotatetObjectDetectionReview/test_data/Dota_train_ap_results.txt"  # Replace with the actual file path
 with open(file_path, "r") as file:
     lines = file.readlines()
 
